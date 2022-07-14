@@ -28,7 +28,7 @@ class CrashControllerTest {
     lateinit var mockMvc: MockMvc
 
     @Test
-    fun testTriggerException() {
+    suspend fun testTriggerException() {
         mockMvc.perform(get("/oups"))
                 .andExpect(view().name("error"))
                 .andExpect(model().attributeExists("error"))
