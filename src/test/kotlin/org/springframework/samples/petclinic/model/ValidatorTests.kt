@@ -2,7 +2,7 @@ package org.springframework.samples.petclinic.model
 
 
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.Test
+import org.junit.Test
 import org.springframework.context.i18n.LocaleContextHolder
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean
 import java.util.*
@@ -13,7 +13,7 @@ import javax.validation.Validator
  * Simple test to make sure that Bean Validation is working
  * (useful when upgrading to a new version of Hibernate Validator/ Bean Validation)
  */
-class ValidatorTests {
+class ValidatorTests private constructor() {
 
     private fun createValidator(): Validator {
         val localValidatorFactoryBean = LocalValidatorFactoryBean()
