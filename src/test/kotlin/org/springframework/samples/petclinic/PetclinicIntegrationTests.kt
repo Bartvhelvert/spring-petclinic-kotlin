@@ -13,7 +13,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 class PetclinicIntegrationTests(@Autowired private val vets: VetRepository) {
 
     @Test
-    fun testFindAll() {
+    fun testFindAll() = run {
         vets.findAll()
         vets.findAll() // served from cache
     }
