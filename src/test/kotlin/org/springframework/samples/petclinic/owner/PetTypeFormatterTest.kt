@@ -3,7 +3,7 @@ package org.springframework.samples.petclinic.owner
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions.assertThrows
-import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.mockito.Mock
@@ -25,7 +25,7 @@ class PetTypeFormatterTest {
 
     private lateinit var petTypeFormatter: PetTypeFormatter
 
-    @BeforeEach
+    @BeforeAll
     fun setup() {
         petTypeFormatter = PetTypeFormatter(pets)
     }
