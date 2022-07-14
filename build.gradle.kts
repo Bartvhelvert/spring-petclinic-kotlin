@@ -17,6 +17,7 @@ plugins {
     kotlin("plugin.spring") version kotlinVersion
 }
 
+val junit4Version = "4.13.2"
 val boostrapVersion = "5.1.3"
 val fontAwesomeVersion = "4.7.0"
 
@@ -57,6 +58,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.boot:spring-boot-starter-webflux")
     testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testImplementation("junit:junit:$junit4Version")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 
     runtimeOnly("com.h2database:h2")
